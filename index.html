@@ -44,24 +44,17 @@
                 <!--img id="imageBefore" class="text-center" style="margin-bottom:0.5em;width:100%;height:auto;" /> -->
 
                 <div ng-show="renderPicUpload == 1">
-                    <img src="img/camara1.png" id="imageBefore" style="width:70%" alt="uploadFile" title="Upload Your Picture" onclick="insertPicture()" />
+                   <img src="img/camara2.png" class="img-thumbnail" id="imageBefore" style="width:70%" alt="uploadFile" title="Upload Picture"
+                        onclick="insertPicture()" />
+                <br><br>
                 </div>
 
-
-                <!-- <span class="glyphicon glyphicon-camera" style="width:80%;" onclick="snapshot()"> </span>  -->
-                <span class="hidden">  
-                    <input type="file" name="fileImage" id='fileImage' class="form-control " >   
-                </span>
+                    <input type="file" name="fileImage" id='fileImage' class="form-control hidden" >   
             </div>
         </form>
         <div class="col-md-12" style="margin-top:1em;">
-            <div class="col-md-offset-3 col-md-6">
-                <button id="image" onclick="snapshot()" class="form-control btn btn-primary"><i class="fa fa-cube" aria-hidden="true"></i> Process Image</button>
-            </div>
             <div class="container">
-                <!-- Trigger the modal with a button -->
-                <!-- <button type="button" id="btnOpendetail" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" ng-show="">Open Modal</button> -->
-
+               
                 <!-- Modal -->
                 <div class="modal fade" id="myModal" role="dialog">
                     <div class="modal-dialog" style="width: 80%;">
@@ -137,9 +130,12 @@
             var isFile = checkTypeImage(this);
             if (isFile) {
                 readURL(this);
+                snapshot();
+                $('#fileImage').attr('class', 'form-control');
             } else {
                 alert("กรุณาใส่ไฟล์รูปภาพที่มีนามสกุล jpg หรือ png");
             }
+            
         });
         function checkTypeImage(input) {
             var file = input.files[0];
@@ -153,11 +149,7 @@
                     this.isFile = true;
                     return true;
                 }
-            } else {
-                this.isFile = false;
-                $('#imageBefore').attr('src', "");
-                return true;
-            }
+            } 
         }
         //upload image to Sever and get api
         function uploadSever() {
@@ -172,7 +164,7 @@
             var array = [];
             var textAPI = "";
             $.ajax({
-                url: "ImageCustomVision.php",
+                url: "classifyavocado.php",
                 type: "POST",
                 data: form,
                 contentType: false,
@@ -204,10 +196,6 @@
         };
     </script>
     <div class="col-md-12 footer-copyright" style="margin-top:2em;">
-        <div class="container-fluid text-center">
-            ©2018 Copyright: <a href="https://patipan-nakarin.com"> PATIPAN NAKARIN </a>
-
-        </div>
     </div>
 </body>
 
