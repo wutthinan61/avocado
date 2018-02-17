@@ -5,39 +5,128 @@
     <title>Custom Vision (File Image)</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="css/bootstrap-theme.css" rel="stylesheet" />
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Athiti:400,700&amp;subset=latin-ext,thai,vietnamese" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-
 </head>
 
 <body>
-
     <style type="text/css">
         body {
             font-family: 'Athiti', sans-serif;
         }
     </style>
 
-    <script type="text/javascript">
-        this.renderPicUpload = 0;
-    </script>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/index.html">Ripeness</a>
+            </div>
 
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="/index.html">
+                            <span class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-log-in"></span>&nbsp;Sign In</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+       
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner" align="center">
+            <div class="item active">
+                <img src="img/Slide1.jpg" alt="Avocado" style="width:80%;">
+            </div>
+
+            <div class="item">
+                <img src="img/Slide2.jpg" alt="Avocado" style="width:80%;">
+            </div>
+
+            <div class="item">
+                <img src="img/Slide3.jpg" alt="Avocado" style="width:80%;">
+            </div>
+        </div>
+
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    
+    
+
+    </br>
+    </br>
+    </br>
 
     <div class="col-md-12">
         <div class="col-md-offset-3 col-md-6">
-            <h3 class="text-center"><b>Custom Vision (File Image)</b></h3>
+            <h3 class="text-center">
+                <b>Custom Vision (File Image)</b>
+            </h3>
         </div>
         <div class="col-md-offset-1 col-md-2">
 
         </div>
     </div>
+
+    <div class="container">
+        <ul class="nav nav-tabs" align="center">
+            <li class="active">
+                <a data-toggle="tab" href="#customer">Customer</a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#gardener">Gardener</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="customer" class="tab-pane fade in active">
+                <h3>Customer</h3>
+                
+
+
+            </div>
+            <div id="gardener" class="tab-pane fade">
+                <h3>Gardener</h3>
+                
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
     <div class="col-md-12">
         <form method="post" accept-charset="utf-8" name="formImage">
             <div class="col-md-offset-3 col-md-6 text-center">
